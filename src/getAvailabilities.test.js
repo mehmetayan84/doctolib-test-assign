@@ -33,6 +33,7 @@ describe("getAvailabilities", () => {
 
     it("test 1", async () => {
       const availabilities = await getAvailabilities(new Date("2014-08-10"));
+
       expect(availabilities.length).toBe(7);
 
       expect(String(availabilities[0].date)).toBe(
@@ -47,7 +48,7 @@ describe("getAvailabilities", () => {
         "9:30",
         "10:00",
         "11:30",
-        "21:00"
+        "12:00"
       ]);
 
       expect(String(availabilities[6].date)).toBe(
@@ -66,16 +67,16 @@ describe("getAvailabilities", () => {
         },
         {
           kind: "opening",
-          starts_at: new Date("2018-08-04 09:30"),
-          ends_at: new Date("2018-08-04 12:30"),
+          starts_at: new Date("2014-08-04 09:30"),
+          ends_at: new Date("2014-08-04 12:30"),
           weekly_recurring: true
         }
       ]);
     });
 
     it("test 1", async () => {
-      const availabilities = await getAvailabilities(new Date("2014-08-10"));
-      expect(availabilities.length).toBe(7);
+      const availabilities = await getAvailabilities(new Date("2014-08-10"), 35);
+      expect(availabilities.length).toBe(35);
 
       expect(String(availabilities[0].date)).toBe(
         String(new Date("2014-08-10"))

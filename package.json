@@ -2,7 +2,7 @@
   "name": "candidate-test",
   "private": true,
   "version": "0.0.0",
-  "description": "Doctolib developer test.",
+  "description": "developer test.",
   "scripts": {
     "db:migrate": "knex migrate:latest",
     "db:rollback": "knex migrate:rollback",
